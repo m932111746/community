@@ -3,6 +3,7 @@ package com.mengxin.community.dao;
 import com.mengxin.community.entity.DiscussPost;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.util.DigestUtils;
 
 import java.util.List;
 
@@ -19,4 +20,8 @@ public interface DiscussPostMapper {
     //@Param给参数起别名
     //如果只有一个参数，并且在<if>里使用，必须加别名
     int selectDiscussPostRows(@Param("userId") int userId);
+
+    int insertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
 }

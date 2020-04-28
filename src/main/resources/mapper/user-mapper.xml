@@ -21,7 +21,7 @@
     <select id="selectByName" resultType="com.mengxin.community.entity.User">
         select <include refid="selectFields"></include>
         from user
-        where name = #{username}
+        where username = #{username}
     </select>
 
     <select id="selectByEmail" resultType="com.mengxin.community.entity.User">
