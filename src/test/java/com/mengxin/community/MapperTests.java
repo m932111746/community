@@ -10,7 +10,6 @@ import com.mengxin.community.entity.Message;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ContextConfiguration;
 
 import java.util.Date;
@@ -45,7 +44,7 @@ public class MapperTests {
 
     @Test
     public void  testSelectPosts() {
-        List<DiscussPost> discussPosts = discussPostMapper.selectDiscussPosts(149, 0, 10);
+        List<DiscussPost> discussPosts = discussPostMapper.selectDiscussPosts(149, 0, 10, 0);
         for (DiscussPost discussPost : discussPosts) {
             System.out.println(discussPost);
 
